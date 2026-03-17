@@ -1,32 +1,32 @@
 # # before semaphore
-# import threading
-# import time
-# import random
+import threading
+import time
+import random
 
-# def p1():
-#     print("H", end="")
-#     time.sleep(random.random())
-#     print("E", end="")
+def p1():
+    print("H", end="")
+    time.sleep(random.random())
+    print("E", end="")
 
-# def p2():
-#     print("L", end="")
+def p2():
+    print("L", end="")
 
-# def p3():
-#     print("O", end="")
+def p3():
+    print("O", end="")
 
-# threads = [
-#     threading.Thread(target=p1),
-#     threading.Thread(target=p2),
-#     threading.Thread(target=p3)
-# ]
+threads = [
+    threading.Thread(target=p1),
+    threading.Thread(target=p2),
+    threading.Thread(target=p3)
+]
 
-# for t in threads:
-#     t.start()
+for t in threads:
+    t.start()
 
-# for t in threads:
-#     t.join()
+for t in threads:
+    t.join()
 
-# print()
+print()
 
 
 # After semaphore
